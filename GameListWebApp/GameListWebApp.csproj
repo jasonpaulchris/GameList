@@ -8,6 +8,8 @@
   <ItemGroup>
     <None Remove="Scripts\app\app.component.ts" />
     <None Remove="Scripts\app\app.module.ts" />
+    <None Remove="Scripts\app\item.service.ts" />
+    <None Remove="Scripts\app\item.ts" />
     <None Remove="Scripts\app\main.ts" />
   </ItemGroup>
 
@@ -24,6 +26,8 @@
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\app\app.component.ts" />
     <TypeScriptCompile Include="Scripts\app\app.module.ts" />
+    <TypeScriptCompile Include="Scripts\app\item.service.ts" />
+    <TypeScriptCompile Include="Scripts\app\item.ts" />
     <TypeScriptCompile Include="Scripts\app\main.ts" />
   </ItemGroup>
 
