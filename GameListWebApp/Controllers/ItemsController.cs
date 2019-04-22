@@ -3,31 +3,62 @@ using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace GameListWebApp.Controllers
 {
     [Route("api/[controller]")]
     public class ItemsController : Controller
     {
+        [HttpGet("id")]
+        public IActionResult Get(int id)
+        {
+            return new JsonResult(GetSampleItems()
+                .Where(i => i.Id == id)
+                .FirstOrDefault(),
+                DefaultJsonSettings);
+        }
+
+        [HttpGet("GetLatest")]
+        public IActionResult GetLatest()
+        {
+            return GetLatest(DefaultNumberOfItems);
+        }
+
         [HttpGet("GetLatest/{n}")]
         public IActionResult GetLatest(int n)
         {
+            if (n > MaxNumberOfItems) n = MaxNumberOfItems;
             var items = GetSampleItems().OrderByDescending(i => i.CreatedDate).Take(n);
 
             return new JsonResult(items, DefaultJsonSettings);
         }
 
+        [HttpGet("GetMostViewed")]
+        public IActionResult GetMostViewed()
+        {
+            return GetMostViewed(DefaultNumberOfItems);
+        }
+
         [HttpGet("GetMostViewed/{n}")]
         public IActionResult GetMostViewed(int n)
         {
+            if (n > MaxNumberOfItems) n = MaxNumberOfItems;
             var items = GetSampleItems().OrderByDescending(i => i.ViewCount).Take(n);
 
             return new JsonResult(items, DefaultJsonSettings);
         }
 
-        [HttpGet("GetRandon/{n}")]
+        [HttpGet("GetRandom")]
+        public IActionResult GetRandom()
+        {
+            return GetRandom(DefaultNumberOfItems);
+        }
+
+        [HttpGet("GetRandom/{n}")]
         public IActionResult GetRandom(int n)
         {
+            if (n > MaxNumberOfItems) n = MaxNumberOfItems;
             var items = GetSampleItems().OrderByDescending(i => Guid.NewGuid()).Take(n);
 
             return new JsonResult(items, DefaultJsonSettings);
@@ -61,6 +92,22 @@ namespace GameListWebApp.Controllers
                 {
                     Formatting = Formatting.Indented
                 };
+            }
+        }
+
+        private int DefaultNumberOfItems
+        {
+            get
+            {
+                return 5;
+            }
+        }
+
+        private int MaxNumberOfItems
+        {
+            get
+            {
+                return 100;
             }
         }
 
