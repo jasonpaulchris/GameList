@@ -11,10 +11,11 @@
     <None Remove="Scripts\app\app.module.ts" />
     <None Remove="Scripts\app\app.routing.ts" />
     <None Remove="Scripts\app\home.component.ts" />
+    <None Remove="Scripts\app\item-detail-edit.component.ts" />
+    <None Remove="Scripts\app\item-detail-view.component.ts" />
     <None Remove="Scripts\app\item-list.component.ts" />
     <None Remove="Scripts\app\item.service.ts" />
     <None Remove="Scripts\app\item.ts" />
-    <None Remove="Scripts\app\itemdetail.component.ts" />
     <None Remove="Scripts\app\login.component.ts" />
     <None Remove="Scripts\app\main.ts" />
     <None Remove="Scripts\app\page-not-found.component.ts" />
@@ -44,10 +45,11 @@
     <TypeScriptCompile Include="Scripts\app\app.module.ts" />
     <TypeScriptCompile Include="Scripts\app\app.routing.ts" />
     <TypeScriptCompile Include="Scripts\app\home.component.ts" />
+    <TypeScriptCompile Include="Scripts\app\item-detail-view.component.ts" />
     <TypeScriptCompile Include="Scripts\app\item-list.component.ts" />
     <TypeScriptCompile Include="Scripts\app\item.service.ts" />
     <TypeScriptCompile Include="Scripts\app\item.ts" />
-    <TypeScriptCompile Include="Scripts\app\itemdetail.component.ts" />
+    <TypeScriptCompile Include="Scripts\app\item-detail-edit.component.ts" />
     <TypeScriptCompile Include="Scripts\app\login.component.ts" />
     <TypeScriptCompile Include="Scripts\app\main.ts" />
     <TypeScriptCompile Include="Scripts\app\page-not-found.component.ts" />
