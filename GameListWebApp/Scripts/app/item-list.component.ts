@@ -1,4 +1,5 @@
 ﻿import { Component, Input, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 import { Item } from "./item";
 import { ItemService } from "./item.service";
 
@@ -62,5 +63,6 @@ export class ItemListComponent implements OnInit {
     onSelect(item: Item) {
         this.selectedItem = item;
         console.log("item with ID " + this.selectedItem.Id + " has been selected");
+        this.router.navigate(["item", this.selectedItem.Id]);
     }
 }

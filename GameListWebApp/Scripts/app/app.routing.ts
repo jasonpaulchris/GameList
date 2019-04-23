@@ -1,5 +1,6 @@
 ﻿import { ModuleWithProviders } from "@angular/forms";
 import { Routes, RouterModule } from "@angular/router";
+import { ItemDetailComponent } from "./item-detail.component";
 
 import { HomeComponent } from "./home.component";
 import { AboutComponent } from "./about.component";
@@ -23,6 +24,10 @@ const appRoutes: Routes = [
     {
         path: "login",
         component: LoginComponent
+    },
+    {
+        path: "item/:id",
+        component: ItemDetailComponent
     },
     {
         path: "**",
