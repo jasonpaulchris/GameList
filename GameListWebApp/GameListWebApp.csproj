@@ -6,11 +6,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Scripts\app\about.component.ts" />
     <None Remove="Scripts\app\app.component.ts" />
     <None Remove="Scripts\app\app.module.ts" />
+    <None Remove="Scripts\app\app.routing.ts" />
+    <None Remove="Scripts\app\home.component.ts" />
+    <None Remove="Scripts\app\item-list.component.ts" />
     <None Remove="Scripts\app\item.service.ts" />
     <None Remove="Scripts\app\item.ts" />
+    <None Remove="Scripts\app\login.component.ts" />
     <None Remove="Scripts\app\main.ts" />
+    <None Remove="Scripts\app\page-not-found.component.ts" />
   </ItemGroup>
 
   <ItemGroup>
@@ -24,11 +30,17 @@
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Include="Scripts\app\about.component.ts" />
     <TypeScriptCompile Include="Scripts\app\app.component.ts" />
     <TypeScriptCompile Include="Scripts\app\app.module.ts" />
+    <TypeScriptCompile Include="Scripts\app\app.routing.ts" />
+    <TypeScriptCompile Include="Scripts\app\home.component.ts" />
+    <TypeScriptCompile Include="Scripts\app\item-list.component.ts" />
     <TypeScriptCompile Include="Scripts\app\item.service.ts" />
     <TypeScriptCompile Include="Scripts\app\item.ts" />
+    <TypeScriptCompile Include="Scripts\app\login.component.ts" />
     <TypeScriptCompile Include="Scripts\app\main.ts" />
+    <TypeScriptCompile Include="Scripts\app\page-not-found.component.ts" />
   </ItemGroup>
 
 </Project>
