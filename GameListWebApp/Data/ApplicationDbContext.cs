@@ -28,8 +28,9 @@ namespace GameListWebApp.Data
             modelBuilder.Entity<Comment>().HasOne(c => c.Item).WithMany(i => i.Comments);
             modelBuilder.Entity<Comment>().HasOne(c => c.ParentId).WithMany(c => c.Children);
             modelBuilder.Entity<Comment>().HasMany(c => c.Children).WithOne(c => c.Parent);
+        }
 
-            public DbSet<Item> Items { get; set; }
+        public DbSet<Item> Items { get; set; }
         public DbSet<Comment> Comments { get; set; }
         public DbSet<ApplicationUser> Users { get; set; }
 
